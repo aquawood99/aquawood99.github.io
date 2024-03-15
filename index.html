@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Aquawood</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+            html{
+                min-height: 100%;
+            }
+            body{
+                margin: 0;
+                height: 100%;
+                background: #030A10;
+            }
+            .background{
+                width: 100%;
+                max-width: fit-content;
+            }
+            .footer{
+                position: relative;
+            }
+            .iBox{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .add{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                height: 24%;
+                float: right;
+                font-size: 1.8rem;
+                font-weight: 400;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-right: 12rem;
+            }
+            .texts{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+            }
+            .texts div{
+                margin-top: 1.6rem;
+                margin-bottom: 1.6rem;
+            }
+            .title{
+                font-weight: bold;
+                font-size: 7.2rem;
+                margin-bottom: 1.6rem;
+            }
+            a{
+                text-decoration: none;
+                color: white;
+                margin-right: 16px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="iBox">
+            <img class="background" src="./h.webp" alt="headImg">
+            <div class="footer">
+                <img class="background" src="./f.webp" alt="bodyImg">
+                <div class="add">
+                    <div class="title">Contact Us</div>
+                    <div class="texts">
+                        <div>Address: 1 AMBER GARDENS #18-04 ONE AMBER SINGAPORE (439957)</div>
+                        <div>Support email:<a href="mailto:support@aquawood.org">support@aquawood.org</a></div>
+                        <div>Business phone:<a href="tel:+6580673843">+65 80673843</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            (() => {
+                function resetFS() {
+                    let w = document.documentElement.clientWidth;
+                    let size = w < 1921 ? (w / 1920) * 10 : 10;
+                    size = size < 2 ? 2 : size;
+                    document.documentElement.style.fontSize = size + 'px';
+                }
+                resetFS();
+                window.addEventListener('resize', resetFontSize);
+            })();
+        </script>
+    </body>
+</html>
